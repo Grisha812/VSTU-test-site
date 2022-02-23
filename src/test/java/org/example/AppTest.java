@@ -22,8 +22,13 @@ abstract public class AppTest {
 
     @Before
     public void setUp(){
+
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -34,7 +39,7 @@ abstract public class AppTest {
     @After
     public void tearDown(){
         driver.close();
-        driver.quit();
+      //  driver.quit();
     }
 }
 

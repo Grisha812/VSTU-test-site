@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mvm_11.2.22" />
+        <module name="VSTU-test-site" />
       </profile>
     </annotationProcessing>
   </component>
